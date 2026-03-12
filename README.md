@@ -4,7 +4,8 @@ Repositorio utilizado para registrar el **avance clase a clase** de los
 ejemplos, ejercicios y prácticas desarrolladas durante la cursada de
 **Diseño y Programación Web II**.
 
-Repositorio oficial del curso: https://github.com/queavos/sz33Dw2.git
+Repositorio oficial del curso:
+git clone  https://github.com/queavos/sz33Dw2.git
 
 El objetivo del repositorio es:
 
