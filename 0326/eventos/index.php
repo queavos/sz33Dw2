@@ -18,7 +18,26 @@ $valor=" no sé" ;
 echo "Bienvenidos ".$nombre."!!! ".$valor;
 ?>    
 </h3>
-
+  <?php 
+  if (isset($_GET['ok']) && $_GET['ok'] == 1) {
+      echo "<p style='color:green;'>Evento insertado correctamente.</p>";
+  }
+  ?>
+  <?php 
+  if (isset($_GET['ok']) && $_GET['ok'] == 2) {
+      echo "<p style='color:green;'>Evento actualizado correctamente.</p>";
+  }
+  ?>
+    <?php 
+  if (isset($_GET['ok']) && $_GET['ok'] == 3) {
+      echo "<p style='color:green;'>Evento eliminado correctamente.</p>";
+  }
+  ?>
+  <?php 
+  if (isset($_GET['error']) && $_GET['error'] == 3) {
+      echo "<p style='color:red;'>Error al eliminar el evento.</p>";
+  }
+  ?>
 <table border="1">
 <tr>
     <td>id</td>

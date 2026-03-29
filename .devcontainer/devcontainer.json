@@ -1,5 +1,5 @@
 {
-  "name": "PHP 8.1 Apache + MariaDB + phpMyAdmin",
+  "name": "DEV HOME - PHP 8.1 Apache + MariaDB + phpMyAdmin ",
   "dockerComposeFile": "docker-compose.yml",
   "service": "php-apache",
   "workspaceFolder": "/var/www/html",   // <- raíz del proyecto
