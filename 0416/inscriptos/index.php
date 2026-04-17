@@ -12,6 +12,7 @@ if (isset($_GET['id'])) {
     $rs=$inscripcion->getByEventoID($_GET['id']);
     $ev=$eventos->getByID($_GET['id']);
     $evento=$ev->fetch_assoc();
+    $ev_id=$_GET['id'];
 } 
 //$rs=$inscripcion->getALL();
 ?>
@@ -57,7 +58,7 @@ if (isset($_GET['id'])) {
     <th>Presente</th>
     <th>Fecha Inscripcion</th>
     <th >
-        <a href="nuevo.php" class="btn btn-outline-primary">Nuevo</a>
+        <a href="nuevo.php?evento_id=<?php echo $ev_id; ?>" class="btn btn-outline-primary">Nuevo</a>
      </th>
         <th colspan="2">   
         <a href="../eventos/index.php" class="btn btn-outline-secondary">Volver a Eventos</a>
@@ -76,8 +77,8 @@ while ($fila= $rs->fetch_assoc()) //loop while que se ejecuta mientras haya fila
     <td> <?php echo $fila["estado"]; ?></td>
     <td> <?php echo $fila["checkin"]; ?></td>
     <td> <?php echo $fila["fecha_inscripcion"]; ?></td>
-    <td ><a href="editar.php?id=<?php echo $fila["id"]; ?>" class="btn btn-outline-warning">Editar</a></td>
-    <td ><a href="borrar.php?id=<?php echo $fila["id"]; ?>" class="btn btn-outline-danger">Borrar</a></td>
+    <td ><a href="editar.php?id=<?php echo $fila["id"]; ?>&evento_id=<?php echo $ev_id; ?>" class="btn btn-outline-warning">Editar</a></td>
+    <td ><a href="borrar.php?id=<?php echo $fila["id"]; ?>&evento_id=<?php echo $ev_id; ?>" class="btn btn-outline-danger">Borrar</a></td>
 
 </tr>
 
